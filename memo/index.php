@@ -65,7 +65,7 @@ echo getHeader("メモ投稿");
                         <a href="./action/select.php?id=<?php echo $memo['id']; ?>" class="list-group-item list-group-item-action <?php echo $edit_id == $memo['id'] ? 'active' : ''; ?>">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1"><?php echo $memo['title']; ?></h5>
-                                <small><?php echo date('Y/m/d:i', strtotime($memo['updated_at'])); ?></small>
+                                <small><?php echo date('Y/m/d H:i', strtotime($memo['updated_at'])); ?></small>
                             </div>
                             <p class="mb-1">
                                 <?php
@@ -77,7 +77,7 @@ echo getHeader("メモ投稿");
                                 ?>
                             </p>
                         </a>
-                    <?php endforeach ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <div class="col-9 h-100">
